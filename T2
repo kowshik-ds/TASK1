@@ -1,0 +1,21 @@
+import random
+import string
+
+len = int(input("enter length of password:"))
+
+use_number=input("enter number need yes/no:")
+use_symbol=input("enter symbol need yes/no:")
+
+charter = string.ascii_letters
+
+if use_number == "yes":
+    charter= charter+string.digits
+
+if use_symbol == "yes":
+    charter=charter+string.punctuation
+password = ""
+
+for i in range(len):
+    password =password+random.choice(charter)
+
+print("your password:",password)
